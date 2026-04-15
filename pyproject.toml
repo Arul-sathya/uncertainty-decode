@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.backends.legacy:BuildBackend"
+
+[project]
+name = "uncertainty-decode"
+version = "0.1.0"
+description = "Uncertainty-Guided KV Cache Eviction for Hallucination-Aware LLM Inference"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Arul Sathya Rajasrinivasan", email = "arulpm018@gmail.com" }
+]
+keywords = ["llm", "inference", "hallucination", "kv-cache", "triton", "vllm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch>=2.1.0",
+    "triton>=2.2.0",
+    "numpy>=1.24",
+    "vllm>=0.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "datasets>=2.14",
+    "scikit-learn>=1.3",
+    "tqdm",
+    "matplotlib",
+    "wandb",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Arul-sathya/uncertainty-decode"
+"Bug Tracker" = "https://github.com/Arul-sathya/uncertainty-decode/issues"
+"arXiv" = "https://arxiv.org/abs/2025.xxxxx"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["uncertainty_decode*"]
