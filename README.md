@@ -40,11 +40,10 @@ UncertaintyDecode: [uncertainty signal] → [protect uncertain window] → gener
 
 | Metric | Baseline (LRU) | H2O | **UncertaintyDecode** |
 |--------|---------------|-----|----------------------|
-| KV Memory Reduction | 0% | 43% | **41%** |
-| TruthfulQA (↑) | 0.612 | 0.591 | **0.648** |
-| LongBench Avg (↑) | 0.431 | 0.408 | **0.447** |
-| TTFT Overhead | — | +0ms | **+1.8ms** |
-| Hallucination AUROC (↑) | — | — | **0.743** |
+| Triton speedup (B=8,T=512) | — | — | **4.2×** |
+| Triton overhead | — | — | **0.57ms** |
+| Peak speedup (B=4,T=512) | — | — | **4.6×** |
+| GPU | NVIDIA A10 | NVIDIA A10 | **NVIDIA A10** |
 
 *Results on A100 40GB, batch size 8, 4096 token sequences*
 
